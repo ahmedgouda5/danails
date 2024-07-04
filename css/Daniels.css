@@ -1,0 +1,374 @@
+:root {
+    --main-bg-color: #f7f7f7;
+    --main-bg2-color: rgb(9, 9, 19);
+    --main-bg-icon-color: #f4f4f4;
+    --main-font-color: #7777;
+    --main-color-white: #fff;
+    --main-transition: all 400ms;
+    --main-transition2: all 800ms;
+}
+*{
+    margin-bottom: 0;
+}
+
+
+/* &&=======>start header*/
+
+.header {
+    background-image: linear-gradient(rgb(0 0 0 / 66%), rgb(0 0 0 / 61%), rgb(0 0 0 / 69%)), url("../daniels/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+.text h3 span {
+    display: inline-block;
+    overflow: hidden;
+    margin-block: -13px;
+    color: #fff;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+  box-shadow:none;
+}
+
+
+.header .fa-brands {
+    background-color: #00000052;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+
+h3 span:nth-of-type(1) {
+
+    animation: designer 8s infinite steps(9);
+}
+
+h3 span:nth-of-type(2) {
+
+    animation: developer 8s infinite steps(9);
+}
+
+h3 span:nth-of-type(3) {
+
+    animation: name 8s infinite steps(11);
+}
+
+
+
+
+@keyframes designer {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+
+    15% {
+        width: 177px;
+    }
+
+
+}
+
+
+@keyframes developer {
+
+    0%,
+    50%,
+    100%,
+    75% {
+        width: 0;
+    }
+
+    55% {
+        width: 200px;
+    }
+
+}
+
+@keyframes name {
+
+    0%,
+    50%,
+    100%,
+    76% {
+        width: 0;
+    }
+
+    87% {
+        width: 240px;
+    }
+
+}
+
+
+.btn-div1 {
+    background-color: var(--main-bg2-color);
+    transition: all 400ms;
+    border: 2px solid var(--main-bg2-color);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-div2 {
+    background-color: #fff;
+    transition: all 400ms;
+    border: 2px solid var(--main-bg2-color);
+    border-radius: 5px;
+    color: rgb(9, 9, 19);
+}
+
+.btn-div1:hover {
+    background-color: #fff;
+    color: #7777;
+}
+
+.btn-div2:hover {
+    background-color: var(--main-bg2-color);
+    color: #fff;
+}
+
+.text span {
+    color: var(--main-font-color);
+}
+
+/* &&==========>End header */
+/* !!=======> start about */
+.about p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+
+.about p span {
+    font-weight: 800;
+    color: #748182;
+}
+
+.about .progress-bar {
+    background-color: var(--main-bg2-color);
+    text-align: left;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-inline: 10px;
+
+}
+
+.about .progress {
+    height: 23px;
+    box-shadow: 2px 1px 6px inset;
+}
+
+/* !!=======> End about */
+/* **==========>start Services */
+
+.services {
+    background-color: var(--main-bg-color);
+}
+
+.icon {
+    background-color: var(--main-bg-icon-color);
+    padding: 15px;
+    transition: var(--main-transition);
+}
+
+.icon:hover {
+    background-color: var(--main-bg2-color);
+    color: var(--main-color-white)
+}
+
+/* **==========>End Services */
+/* ^===========> start portfolio */
+
+.portfolio .inner:hover .overlay {
+    opacity: 1;
+    border: 6px solid var(--main-font-color);
+
+}
+
+.portfolio .inner .overlay {
+    position: absolute;
+    background-color: white;
+    inset: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--main-transition2);
+}
+
+.portfolio .inner .overlay i {
+    background-color: black;
+    border: 1x solid;
+    border-radius: 50%;
+    color: #fff;
+    padding: 5px;
+    transition: var(--main-transition);
+
+}
+
+.portfolio .inner .overlay i:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.portfolio .nav-pills {
+    --bs-nav-pills-border-radius: var(--bs-border-radius);
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-bg: ;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: black;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.portfolio .nav-pills .nav-link.active,
+.portfolio .nav-pills .show>.nav-link {
+    color: black;
+    background-color: white;
+    position: relative;
+}
+
+.portfolio .nav-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* ^===========> start portfolio */
+/* !!==========> start Testimonials */
+.Testimonials {
+    background-color: var(--main-bg-color);
+}
+
+.carousel-inner .images {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 135px;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 11px;
+    height: 12px;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: var(--main-font-color);
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+
+
+}
+
+/* !!==========> End Testimonials */
+/* &===========> start team */
+.team{
+    background-color: var(--main-bg-color);
+}
+.team p{
+    margin-bottom: 0;
+}
+.team .team-box:hover img{
+    transform: scale(1.17);
+    transition: var(--main-transition);
+}
+.team .team-box:hover .overlay {
+    opacity: 1;
+    transform: rotateY(1turn);
+
+}
+.team .container{
+   padding-block: 50px;
+}
+.team .boxes{
+    padding-block: 100px
+}
+ .team .overlay{
+    background-color: #fff;
+    position: absolute;
+    inset: 9px 6px 65px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    font-size: 28px;
+    opacity: 0;
+    color: black;
+    transition: var(--main-transition);
+
+}
+
+/* &===========> End team */
+/* ^===========> start contact */
+
+.contact .btn-div {
+    background-color: var(--main-bg2-color);
+    color: var(--main-color);
+    border: 1px solid;
+    border-radius: 8px;
+    padding-block: 5px;
+    padding-inline: 22px;
+}
+
+.contact .box .fa-solid {
+    font-size: 24px;
+    background-color: var(--main-bg-icon-color);
+    border-radius: 50%;
+    padding: 17px;
+    transition: var(--main-transition);
+}
+
+.contact .box .fa-solid:hover {
+    background-color: var(--main-bg2-color);
+    color: var(--main-color-white);
+}
+
+
+.form input {
+    background-color: var(--main-bg-icon-color);
+}
+
+.form textarea {
+    background-color: var(--main-bg-icon-color);
+}
+
+/* ^===========> End contact */
